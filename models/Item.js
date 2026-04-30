@@ -12,11 +12,6 @@ const itemSchema = new mongoose.Schema(
       required: [true, "Category is required"],
       trim: true,
     },
-    modelNumber: {
-      type: String,
-      required: [true, "Model number is required"],
-      trim: true,
-    },
     price: {
       type: Number,
       required: [true, "Price is required"],
@@ -27,15 +22,14 @@ const itemSchema = new mongoose.Schema(
       required: [true, "Description is required"],
       trim: true,
     },
-    expiryDate: {
-      type: Date,
-      required: [true, "Expiry date is required"],
-    },
-
     imageUrl: {
       type: String,
       default: "",
       trim: true,
+    },
+    expiryDate: {
+      type: Date,
+      required: [true, "Expiry date is required"],
     },
   },
   { timestamps: true }
